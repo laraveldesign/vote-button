@@ -1,0 +1,53 @@
+{
+    "name": "laraveldesign/vote-button",
+    "description": "Vote button for Laravel installations using the T.A.L.L. stack.",
+    "keywords": [
+        "laraveldesign",
+        "vote-button"
+    ],
+    "homepage": "https://github.com/laraveldesign/vote-button",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Shane Barron",
+            "email": "cshanebarron@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0",
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Laraveldesign\\VoteButton\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Laraveldesign\\VoteButton\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Laraveldesign\\VoteButton\\VoteButtonServiceProvider"
+            ],
+            "aliases": {
+                "VoteButton": "Laraveldesign\\VoteButton\\VoteButtonFacade"
+            }
+        }
+    }
+}
